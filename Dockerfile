@@ -8,4 +8,4 @@ RUN pip3 install --upgrade pip &&\
 
 COPY . .
 
-CMD [ "python", "./tests.py" ]
+CMD [ "python", "./tests.py" ] 
