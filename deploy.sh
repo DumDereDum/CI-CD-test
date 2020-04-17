@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh 
 
 IMAGE="batters21/devops-18pi-dumderedum" 
 GIT_VERSION=$(git describe --always --abbrev --tags --long)
