@@ -22,5 +22,10 @@ jobs:
         run: python3 -m pycodestyle DataBase.py
       - name: Run tests
         run: python3 tests.py
-      - name: Deploy
-        run: bash action_deploy.sh
+      - name: Login to docker.io
+        run:  echo "${secrets.DOCKER_PASSWORD}" | docker login -u "${secrets.DOCKER_USERNAME}" --password-stdin
+      - uses: actions/checkout@master
+      - name: Build image
+        run: docker build -t secrets.IMAGE:${GITHUB_REF:11} -f Dockerfile .
+      - name: Push image to docker.io
+        run: docker push $secrets.IMAGE:${GITHUB_REF:11}
