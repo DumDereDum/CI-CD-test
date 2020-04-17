@@ -22,11 +22,10 @@ jobs:
         run: python3 -m pycodestyle DataBase.py
       - name: Run tests
         run: python3 tests.py
-
+      - name: Login to docker.io
         env:
           LOGIN: ${{ secrets.DOCKER_USERNAME }}
           PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      - name: Login to docker.io
         run:  echo "PASSWORD" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
       - uses: actions/checkout@master
       - name: Build image
