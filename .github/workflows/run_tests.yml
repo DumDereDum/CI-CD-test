@@ -26,7 +26,7 @@ jobs:
         env:
           LOGIN: ${{ secrets.DOCKER_USERNAME }}
           PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        run: echo LOGIN
+        run: echo $LOGIN
       - uses: actions/checkout@master
       - name: Build image
         run: docker build -t ${{ secrets.IMAGE }}:${GITHUB_REF:11} -f Dockerfile .
