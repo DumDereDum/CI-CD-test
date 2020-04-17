@@ -8,6 +8,4 @@ RUN pip3 install --upgrade pip &&\
 
 COPY . .
 
-RUN python3 -m pycodestyle DataBase.py 
-
 CMD [ "python", "./tests.py" ]
