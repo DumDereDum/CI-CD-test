@@ -10,7 +10,7 @@ install:
 
 script: 
     - python -m pycodestyle DataBase.py
-    - python test.py
+    - python tests.py
 
 deploy:
     provider: script
