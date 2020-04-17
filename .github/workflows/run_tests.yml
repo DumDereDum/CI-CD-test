@@ -1,11 +1,6 @@
 name: CI
 
-on:
- push:
-   tags:
-     - '!refs/tags/*'
-   branches:
-     - '*'
+on: push
 
 jobs:
   run_tests:
