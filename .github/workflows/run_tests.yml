@@ -7,7 +7,7 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@master
-      - uses: "bulv1ne/python-style-check@master"
+      - uses: bulv1ne/python-style-check@master
       - uses: actions/setup-python@v1
         with:
           python-version: '3.8'
