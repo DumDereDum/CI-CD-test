@@ -23,4 +23,4 @@ jobs:
       - name: Run tests
         run: python3 tests.py
       - name: Deploy
-        run: bash deploy.sh
+        run: bash action_deploy.sh
