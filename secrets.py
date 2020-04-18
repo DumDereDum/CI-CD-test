@@ -17,10 +17,10 @@ def encrypt(public_key: str, secret_value: str) -> str:
 # ----------------------------------------
 # input your information here
 
-token = '***'  # your token
+token = '***'  # your github token
 user_name = '***'  # your user name
 password = '***'  # your password
-image_name = '***'  # your password
+image_name = '***'  # your image name
 repository_name = '***'  # your repository
 # ----------------------------------------
 
